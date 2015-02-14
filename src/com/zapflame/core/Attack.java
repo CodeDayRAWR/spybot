@@ -1,19 +1,14 @@
 package com.zapflame.core;
 
-public class Attack {
-  public enum TYPE {
-    DAMAGE, BIT_DELETE, BIT_CREATE, HEAL
-  }
+import com.zapflame.core.Cell;
 
-  int targetX, targetY;
+public class Attack extends Action {
+  Unit unit;
+  Cell target;
+  Affect affect;
 
-  public TYPE t;
-  public int magnitude;
-
-  public Attack(int targetX, int targetY, TYPE t, int magnitude) {
-    this.targetX = targetX;
-    this.targetY = targetY;
-    this.t = t;
-    this.magnitude = magnitude;
+  public Attack(Unit unit, Cell target, Affect affect) {
+    super(unit, target);
+    this.affect = affect;
   }
 }
