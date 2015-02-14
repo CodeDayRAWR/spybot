@@ -5,6 +5,3 @@ public interface PlayerInterface {
   public void update(Message);
   public void update(GameStateMessage);
 }
-
-  
-
