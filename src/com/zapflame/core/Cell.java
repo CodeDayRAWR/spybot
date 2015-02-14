@@ -1,9 +1,11 @@
 package com.zapflame.core;
 
-public class Cell {
-  protected boolean hasFloor;
-  protected FloorType floor;
+public class CellState {
   enum FloorType {
     TheOnlyFloorType
   }
+
+  protected boolean hasFloor;
+  protected FloorType floor;
+  protected Set<Item> items;
 }
