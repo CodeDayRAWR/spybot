@@ -1,4 +1,3 @@
-/bin/
-.project
-.classpath
-*.class
+/target/*
+/.project
+/.classpath
