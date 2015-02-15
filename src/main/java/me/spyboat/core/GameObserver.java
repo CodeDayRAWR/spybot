@@ -1,5 +1,5 @@
 package me.spyboat.core;
 
-public class GameObserver {
+public interface GameObserver {
 
 }
