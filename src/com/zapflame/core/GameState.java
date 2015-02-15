@@ -1,3 +1,5 @@
+package com.zapflame.core;
+
 import java.util.UUID;
 
 public class GameState {

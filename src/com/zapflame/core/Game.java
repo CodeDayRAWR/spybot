@@ -15,6 +15,7 @@ public class Game {
   }
 
   public void run() {
-    // Code goes here
+	  players.get(0).updateGameState(gs);
+	  players.get(0).control.update();
   }
 }
