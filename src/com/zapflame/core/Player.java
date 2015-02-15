@@ -4,7 +4,7 @@ import com.zapflame.interfaces.PlayerInterface;
 
 public class Player {
   PlayerInterface control;
-  public Unit activeUnit;
+  public UnitState activeUnit;
   public GameState gs;
 
   public Player(PlayerInterface control) {
