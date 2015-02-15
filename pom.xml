@@ -5,6 +5,10 @@
   <artifactId>spybot-mvn</artifactId>
   <packaging>jar</packaging>
   <version>1.0-SNAPSHOT</version>
+  <properties>
+      <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+      <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+  </properties>
   <build>
     <plugins>
       <plugin>
@@ -21,5 +25,10 @@
   <name>spybot-mvn</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+    <dependency>
+        <groupId>org.json</groupId>
+        <artifactId>json</artifactId>
+        <version>20141113</version>
+    </dependency>
   </dependencies>
 </project>
