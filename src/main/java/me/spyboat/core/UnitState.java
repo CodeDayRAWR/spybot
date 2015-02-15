@@ -5,17 +5,19 @@ import java.util.Collections;
 import java.util.UUID;
 
 public class UnitState {
-  public UnitState(UUID uid, List<Position> sectors, Player owner, int moveRate, int maxSize) {
+  public UnitState(String name, UUID uid, List<Position> sectors, int owner) {
+    this.baseUnit = Templates.units.get(name);
     this.uid = uid;
     this.sectors = Collections.unmodifiableList(sectors);
     this.owner = owner;
-    this.moveRate = moveRate;
-    this.maxSize = maxSize;
+    this.moveRate = baseUnit.baseMoveRate;
+    this.maxSize = baseUnit.baseMaxSize;
   }
   
-  protected final List<Position> sectors;
-  protected final UUID uid;
-  final Player owner;
-  final int moveRate;
-  final int maxSize;
+  public final Unit baseUnit;
+  public final List<Position> sectors;
+  public final UUID uid;
+  public final int owner;
+  public final int moveRate;
+  public final int maxSize;
 }

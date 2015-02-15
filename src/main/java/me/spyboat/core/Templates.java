@@ -14,6 +14,8 @@ public class Templates {
   public static HashMap<String, Affect> affects;
 
   public static void loadTemplates(String affectPath, String unitPath) throws IOException {
+    units = new HashMap<String, Unit>();
+    affects = new HashMap<String, Affect>();
     byte[] affectContents = Files.readAllBytes(Paths.get(affectPath));
     String s = new String(affectContents);
     JSONObject jso = new JSONObject(s);
@@ -36,7 +38,7 @@ public class Templates {
     JSONObject unitJso = new JSONObject(sUnit);
     JSONArray unitArr = (JSONArray) unitJso.get("units");
     for (int i = 0; i < unitArr.length(); i++) {
-        JSONObject current = affectArr.getJSONObject(i);
+        JSONObject current = unitArr.getJSONObject(i);
         String name = current.getString("name");
         String description = current.getString("description");
         int moveRate = current.getInt("moveRate");

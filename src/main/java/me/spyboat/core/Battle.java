@@ -10,6 +10,7 @@ public class Battle {
   protected final List<Player> players;
   protected final BoardState initialBoardState;
   protected final Map<Player, Integer> unitOwners;
+  protected Stack<BoardState> undoStack;
 
   protected Set<GameObserver> observers;
 
@@ -30,11 +31,19 @@ public class Battle {
   }
 
   public void run() {
-	  players.get(0).updateBoardState(initialBoardState);
-	  players.get(0).control.update();
+    undoStack = new Stack<BoardState>();
+    undoStack.push(initialBoardState);
+    players.get(0).updateBoardState(initialBoardState);
+
   }
 
+  public void validAction(Player p, Action a) {
+  }
+
+  // Returns whether the action went through
+
   public void doTurn(Player player) {
+    player.transferControl();
     player.getTurn(new TurnBuilder() {
       public void doAction(Action action) {
 

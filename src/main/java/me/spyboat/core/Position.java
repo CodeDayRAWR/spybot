@@ -3,8 +3,12 @@ package me.spyboat.core;
 public final class Position {
   public final int x, y;
   public Position(int x, int y) {
-	  this.x = x;
-	  this.y = y;
+    this.x = x;
+    this.y = y;
+  }
+
+  public int distance(Position p) {
+    return Math.abs(x - p.x) + Math.abs(y - p.y);
   }
   
   public boolean equals(Object obj) {

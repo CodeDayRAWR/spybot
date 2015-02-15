@@ -13,9 +13,12 @@ public class Player {
   }
   
   public void updateBoardState(BoardState gs) {
-	  this.gs = gs;
-	  control.updateBoardState(gs);
+    this.gs = gs;
+    control.updateBoardState(gs);
   }
+
+  public void transferControl() {
+
   
   public void getTurn(TurnBuilder tb) {
 	  
