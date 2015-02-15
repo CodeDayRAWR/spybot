@@ -7,7 +7,7 @@ import com.zapflame.core.*;
 
 public class TerminalInterface extends PlayerInterface {
   Player parent;
-  GameState gs;
+  BoardState gs;
   Scanner inputReader;
 
   public TerminalInterface() {
@@ -18,12 +18,12 @@ public class TerminalInterface extends PlayerInterface {
     this.parent = parent;
   }
   
-  public void updateGameState(GameState gs) {
+  public void updateBoardState(BoardState gs) {
     this.gs = gs;
   }
 
   public Action getAction() {
-    UUID active = parent.activeUnit.uid;
+/*    UUID active = parent.activeUnit.uid;
     String type = inputReader.next();
     char c = type.charAt(0);
     switch (c) {
@@ -43,7 +43,8 @@ public class TerminalInterface extends PlayerInterface {
         return Action.endTurn;
       default:
     	return null;
-    }
+    }*/
+	  return null;
   }
 
   public void update() {

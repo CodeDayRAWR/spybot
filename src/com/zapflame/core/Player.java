@@ -5,15 +5,19 @@ import com.zapflame.interfaces.PlayerInterface;
 public class Player {
   PlayerInterface control;
   public UnitState activeUnit;
-  public GameState gs;
+  public BoardState gs;
 
   public Player(PlayerInterface control) {
     this.control = control;
     control.setParent(this);
   }
   
-  public void updateGameState(GameState gs) {
+  public void updateBoardState(BoardState gs) {
 	  this.gs = gs;
-	  control.updateGameState(gs);
+	  control.updateBoardState(gs);
+  }
+  
+  public void getTurn(TurnBuilder tb) {
+	  
   }
 }

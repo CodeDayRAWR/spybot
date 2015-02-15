@@ -19,14 +19,14 @@ public class BoardState {
     units = new HashMap<UUID, UnitState>();
   }
 
-  public GameState applyAction(Action a) {
+  public BoardState applyAction(Action a) {
     // Either cast to the appropriate Action subclass here and interpret it, or
     // delegate to an "Action#apply" method
 	  return null;
   }
 
-  public static GameState loadFromFile(String path) {
-    GameState gs = new GameState();
+  public static BoardState loadFromFile(String path) {
+    BoardState gs = new BoardState();
     try {
       byte[] contents = Files.readAllBytes(java.nio.file.Paths.get(path));
       String s = new String(contents);

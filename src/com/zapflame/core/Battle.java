@@ -17,7 +17,7 @@ public class Battle {
                 BoardState boardState,
                 Map<Player, Integer> unitOwners) {
     this.players = Collections.unmodifiableList(players);
-    initialBoardState = board;
+    initialBoardState = boardState;
     this.unitOwners = Collections.unmodifiableMap(unitOwners);
   }
 
@@ -30,13 +30,13 @@ public class Battle {
   }
 
   public void run() {
-	  players.get(0).updateGameState(gs);
+	  players.get(0).updateBoardState(initialBoardState);
 	  players.get(0).control.update();
   }
 
   public void doTurn(Player player) {
     player.getTurn(new TurnBuilder() {
-      public void do(Action action) {
+      public void doAction(Action action) {
 
       }
       public void undoLast() {

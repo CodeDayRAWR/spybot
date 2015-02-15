@@ -13,9 +13,9 @@ public class Main {
     ArrayList<Player> players = new ArrayList<Player>();
     players.add(p1);
     players.add(p2);
-    GameState.loadFromFile("res/demo-level.json");
-    Game g = new Game(players);
-    g.run();
+    BoardState.loadFromFile("res/demo-level.json");
+    //Battle b = new Battle(players);
+    //b.run();
   }
 
 }
