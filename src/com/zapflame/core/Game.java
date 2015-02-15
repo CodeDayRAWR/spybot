@@ -1,19 +1,21 @@
 package com.zapflame.core;
 
-import java.util.Collections;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.Collections;
 
 public class Game {
   protected List<Player> players;
-  private GameState gs;
+  protected Map<Player, Set<UUID>> unitOwners;
 
   public Game(List<Player> players) {
     this.players = Collections.unmodifiableList(players);
-    gs = new GameState(16, 13);
+    GameState = new GameState();
   }
 
   public void run() {
 	  players.get(0).updateGameState(gs);
-	  players.get(0).control.update();    
+	  players.get(0).control.update();
   }
 }

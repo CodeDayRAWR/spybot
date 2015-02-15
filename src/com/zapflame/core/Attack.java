@@ -1,14 +1,11 @@
 package com.zapflame.core;
 
-import com.zapflame.core.Cell;
+public class Attack implements Action {
+  protected final Affect affect;
+  protected final Position target;
 
-public class Attack extends Action {
-  Unit unit;
-  Cell target;
-  Affect affect;
-
-  public Attack(Unit unit, Cell target, Affect affect) {
-    super(unit, target);
+  public Attack(Affect affect, Position target) {
     this.affect = affect;
+    this.target = target;
   }
 }

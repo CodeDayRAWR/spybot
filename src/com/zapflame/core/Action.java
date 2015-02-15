@@ -18,9 +18,3 @@ class EndTurn extends Action {
 		super(unit, target);
 	}
 }
-
-class EndMove extends Action {
-	public EndMove(Unit unit, Cell target) {
-		super(unit, target);
-	}
-}
