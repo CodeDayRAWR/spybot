@@ -1,6 +1,8 @@
 package com.zapflame.core;
 
-public class CellState {
+import java.util.Set;
+
+public class Cell {
   protected boolean hasFloor;
   protected FloorType floor;
   protected Set<Item> items;

@@ -1,11 +1,12 @@
 package com.zapflame.core;
 
-public class Attack implements Action {
-  protected final Affect affect;
-  protected final Position target;
+import java.util.UUID;
 
-  public Attack(Affect affect, Position target) {
+public class Attack extends Action {
+  protected final Affect affect;
+
+  public Attack(UUID target, Affect affect, Position pos) {
+	super(target, pos);
     this.affect = affect;
-    this.target = target;
   }
 }

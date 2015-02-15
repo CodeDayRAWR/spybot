@@ -1,20 +1,21 @@
 package com.zapflame.core;
 
+import java.util.UUID;
+
 public abstract class Action {
   public static final Action endTurn = new EndTurn(null, null);
-  public static final Action endMove = new EndMove(null, null);
 
-  Unit unit;
-  Cell target;
+  protected final UUID target;
+  protected final Position pos;
 
-  public Action(Unit unit, Cell target) {
-	  this.unit = unit;
+  public Action(UUID target, Position pos) {
 	  this.target = target;
+	  this.pos = pos;
   }
 }
 
 class EndTurn extends Action {
-	public EndTurn(Unit unit, Cell target) {
+	public EndTurn(UUID unit, Position target) {
 		super(unit, target);
 	}
 }
