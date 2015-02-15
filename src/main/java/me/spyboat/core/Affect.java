@@ -1,4 +1,4 @@
-package com.zapflame.core;
+package me.spyboat.core;
 
 public class Affect {
   public enum Sort {

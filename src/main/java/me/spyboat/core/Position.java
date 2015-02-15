@@ -1,4 +1,4 @@
-package com.zapflame.core;
+package me.spyboat.core;
 
 public final class Position {
   public final int x, y;

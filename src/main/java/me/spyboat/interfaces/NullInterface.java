@@ -1,6 +1,6 @@
-package com.zapflame.interfaces;
+package me.spyboat.interfaces;
 
-import com.zapflame.core.Action;
+import me.spyboat.core.Action;
 
 public class NullInterface extends PlayerInterface {
 

@@ -1,9 +1,9 @@
-package com.zapflame.interfaces;
+package me.spyboat.interfaces;
 
 import java.util.Scanner;
 import java.util.UUID;
 
-import com.zapflame.core.*;
+import me.spyboat.core.*;
 
 public class TerminalInterface extends PlayerInterface {
   Player parent;

@@ -1,4 +1,4 @@
-package com.zapflame.core;
+package me.spyboat.core;
 
 import java.io.IOException;
 import java.nio.file.Files;

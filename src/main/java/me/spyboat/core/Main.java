@@ -1,8 +1,8 @@
-package com.zapflame.core;
+package me.spyboat.core;
 
 import java.util.ArrayList;
 
-import com.zapflame.interfaces.*;
+import me.spyboat.interfaces.*;
 
 
 public class Main {

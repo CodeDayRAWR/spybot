@@ -1,6 +1,6 @@
-package com.zapflame.interfaces;
+package me.spyboat.interfaces;
 
-import com.zapflame.core.*;
+import me.spyboat.core.*;
 
 public abstract class PlayerInterface {
   Player parent;

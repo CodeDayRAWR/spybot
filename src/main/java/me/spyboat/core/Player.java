@@ -1,6 +1,6 @@
-package com.zapflame.core;
+package me.spyboat.core;
 
-import com.zapflame.interfaces.PlayerInterface;
+import me.spyboat.interfaces.PlayerInterface;
 
 public class Player {
   PlayerInterface control;
