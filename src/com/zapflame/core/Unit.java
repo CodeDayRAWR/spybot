@@ -1,15 +1,18 @@
 package com.zapflame.core;
 
 import java.util.ArrayList;
-import java.util.List;
-import java.util.UUID;
 
 public class Unit {
-	public ArrayList<Affect> affects;
-	public int moveRate, maxSize;
-	public UUID uid;
-	public Player owner;
-	public String name, description;
-	List<Cell> sectors;
+  public ArrayList<Affect> affects;
+  public int baseMoveRate, baseMaxSize;
+  public String name, description;
 
+  public Unit(ArrayList<Affect> affects, int baseMoveRate, int baseMaxSize,
+      String name, String description) {
+    this.affects = affects;
+    this.baseMoveRate = baseMoveRate;
+    this.baseMaxSize = baseMaxSize;
+    this.name = name;
+    this.description = description;
+  }
 }
