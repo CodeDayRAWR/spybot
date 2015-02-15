@@ -5,9 +5,11 @@ public class Affect {
     HEALTH, FLOOR, STEPCAP, SIZECAP
   }
 
-  protected Affect(TYPE t, int magnitude, int cost, int requiredSize) {
-    this.t = t;
+  protected Affect(Sort sort, int magnitude, int cost, int requiredSize) {
+    this.sort = sort;
     this.magnitude = magnitude;
+    this.cost = cost;
+    this.requiredSize = requiredSize;
   }
 
   public final Sort sort;
