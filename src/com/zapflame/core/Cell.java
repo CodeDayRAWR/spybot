@@ -6,4 +6,7 @@ public class Cell {
   enum FloorType {
     TheOnlyFloorType
   }
+  public Cell(boolean hasFloor) {
+	  this.hasFloor = hasFloor;
+  }
 }

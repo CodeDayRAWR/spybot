@@ -56,13 +56,14 @@ public class TerminalInterface extends PlayerInterface {
       for (int i = 0; i < 3; i++) rows[y+i] = new StringBuilder();
       for (int x = 0; x < gs.cells[0].length; x++) {
         rows[y].append("+---");
-        rows[y+1].append("+   ");
-        rows[y+2].append("+   ");
+        rows[y+1].append("|   ");
+        rows[y+2].append("|   ");
       }
-      for (int i = 0; i < 3; i++) rows[y+i].append("+");
+      rows[y].append('+');
+      for (int i = 1; i < 3; i++) rows[y+i].append("|");
     }
     rows[height-1] = new StringBuilder();
-    for (int j = 0; j < width; j++) rows[height-1].append('+');
+    for (int j = 0; j < (width - 1) / 4; j++) rows[height-1].append("+---");
 
     for (int r = 0; r < height; r++) {
       System.out.println(rows[r].toString());
